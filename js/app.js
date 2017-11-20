@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
   // agregando evento click a button
   button.addEventListener('click', submit);
 
-  //fucion que desabilite el boton
+  // fucion que desabilite el boton
   function disabledButton() {
     button.disabled = true;
     button.classList.add('disabled-button');
@@ -23,27 +23,26 @@ window.addEventListener('load', function() {
   }
 
   // funcion que ejecuta el evento :
-  function submit(e) {
-    //validando entrada de texto
+  function submit(event) {
+    // validando entrada de texto
     if (text.value) {
-      enabledButton()
+      enabledButton();
       var newCommit = document.createElement('div');
       newCommit.textContent = 'A las ' + getHour() + ' : ' + text.value;
       newCommit.setAttribute('class', 'new-commit');
       parent.appendChild(newCommit);
-      text.value = "";
+      text.value = '';
       counter.textContent = 140;
-
     } else {
       alert('Ingrese una cadena de texto');
       disabledButton();
     }
   }
-  //agregando evento keyup al texto
+  // agregando evento keyup al texto
   text.addEventListener('keyup', counterLetters);
 
-  //funcion que ejecuta el eveto
-  function counterLetters(e) {
+  // funcion que ejecuta el eveto
+  function counterLetters(event) {
     var maxNumber = 140;
     var length = text.value.length;
     var result = maxNumber - length;
@@ -53,33 +52,31 @@ window.addEventListener('load', function() {
     // haciendo el cambio de colores según los caracteres restantes
     if (result > 20) {
       counter.setAttribute('class', 'counter-green');
-      enabledButton()
+      enabledButton();
     } else if (result > 10) {
       counter.setAttribute('class', 'counter-yellow');
-      enabledButton()
+      enabledButton();
     } else if (result > 0) {
       counter.setAttribute('class', 'counter-orange');
-      enabledButton()
+      enabledButton();
     } else if (result < 0) {
       counter.setAttribute('class', 'counter-red');
       disabledButton();
     }
-
   }
 
   // agregando evento al textArea:
-  text.addEventListener('keypress', noScrollBar)
-  //funcion qe ejecuta el evento
-  function noScrollBar(e) {
-    if (e.keyCode == 13) {
-      var intialRow = text.getAttribute('rows')
+  text.addEventListener('keypress', noScrollBar);
+  // funcion qe ejecuta el evento
+  function noScrollBar(event) {
+    if (e.keyCode === 13) {
+      var intialRow = text.getAttribute('rows');
       var newRows = parseInt(intialRow);
       newRows += 1;
-      text.setAttribute('rows', newRows)
+      text.setAttribute('rows', newRows);
     } else {
-      text.setAttribute('rows', 2)
+      text.setAttribute('rows', 2);
     }
-
   }
   // funcion para obtener la hora :
   function getHour() {
@@ -88,4 +85,4 @@ window.addEventListener('load', function() {
     return hour;
   }
   getHour();
-})
+});
