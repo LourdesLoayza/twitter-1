@@ -1,18 +1,18 @@
 /*header styles*/
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-body{
+body {
   background-color: #E6ECF0;
 }
 
 header {
   background-color: #ffffff;
-
 }
 
 header ul {
@@ -29,63 +29,166 @@ header ul li {
   padding: 1vw 1vw;
 }
 
-header ul li:hover{
+header ul li:hover {
   border-bottom: 3px solid #1DA1F2;
-  color:#1DA1F2;
+  color: #1DA1F2;
 }
 
-.logo{
+.logo {
   display: inline-block;
 }
 
 .logo i {
-  margin-left:20vw;
-  color:#1DA1F2;
+  margin-left: 20vw;
+  color: #1DA1F2;
 }
 
-.search{
+.search {
   border: 1px solid #e6ecf0;
   border-radius: 20px;
   background-color: #E6ECF0;
   display: inline-block;
   padding: 6px;
-  margin:0 0 0 15vw;
+  margin: 0 0 0 15vw;
   width: 200px;
-
 }
 
 .search input {
   border-style: none;
   background-color: #E6ECF0;
-
+  outline: none;
 }
 
 .search i {
-  color : #c0c4c6;
+  color: #c0c4c6;
 }
 
-.button-style{
-background-color: #1DA1F2;
-border-style: none;
-border-radius: 20px;
-color:#ffffff;
-font-size: 14px;
-font-weight: 700;
-padding: 10px 16px;
-
+.button-style {
+  background-color: #1DA1F2;
+  border-style: none;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 16px;
+  outline: none;
 }
 
-.button-style:hover{
- background-color: #1b88c6;
- cursor: pointer;
+.button-style:hover {
+  background-color: #1b88c6;
+  cursor: pointer;
 }
 
-.user-icon{
+/* styles of events */
+
+.disabled-button {
+  opacity: 0.2;
+}
+
+.disabled-button:hover {
+  cursor: not-allowed;
+}
+
+.user-icon {
   color: #5b6063;
   margin: 0 1vw;
 }
 
-.text-area{
-  outline: 1px solid red ;
+.profile {
+  margin: 20px;
+  position: absolute;
+  left: 3.5vw;
+  top: 6vh;
+  height: 25vh;
+}
+
+.back-image {
+  background-color: #1DA1F2;
+  height: 15vh;
+  width: 22vw;
+}
+
+.camera-icon {
+  position: absolute;
+}
+
+.profile i {
+  background-color: #1DA1F2;
+  color: #ffffff;
+  border-radius: 100%;
+  border: 3px solid #ffffff;
   padding: 10px;
+  position: relative;
+  left: 1vw;
+  bottom: 4vh;
+  z-index: 999;
+}
+
+.data-user {
+  background-color: #ffffff;
+  height: 11vh;
+  padding-right: 25px;
+  text-align: right;
+  width: 22vw;
+}
+
+.text-area {
+  height: auto;
+  padding: 10px;
+  display: inline-block;
+  background-color: #e8f5fd;
+  position: relative;
+  left: 28vw;
+  top: 2vh;
+}
+
+textarea {
+  border-style: none;
+  border-radius: 10px;
+  border: 2px solid #1da1f2;
+  overflow: hidden;
+  outline: none;
+  width: 30vw;
+  resize: none;
+  height: auto;
+}
+
+.counter {
+  outline: 1px solid green;
+}
+
+.counter-green, .counter-yellow, .counter-orange, .counter-red {
+  font-weight: 700;
+}
+
+.counter-green {
+  color: #277c1d;
+}
+
+.counter-yellow {
+  color: #f7df04;
+}
+
+.counter-orange {
+  color: #f76f07;
+}
+
+.counter-red {
+  color: #d60007;
+}
+
+.new-commit {
+  background-color: #ffffff;
+  width: 44.5vw;
+  padding: 15px;
+  word-wrap: break-word;
+  margin: 1px;
+  position: relative;
+  left: 28vw;
+  top: 3vh;
+}
+
+.new-commit:hover {
+  background-color: #F5F8FA;
+  cursor: pointer;
 }
